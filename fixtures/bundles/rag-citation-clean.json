@@ -1,0 +1,30 @@
+{
+  "evidence_bundle_version": "0.1",
+  "bundle": {
+    "id": "rag-procurement-answer-2026-05-20",
+    "subject": "RAG citation pack for procurement Q&A",
+    "purpose": "rag-citation-pack",
+    "creator": "rag-pipeline@example.com",
+    "labels": { "query-hash": "abc123" }
+  },
+  "items": [
+    {
+      "id": "doc-a",
+      "path": "content/doc-a.pdf",
+      "media_type": "application/pdf",
+      "sha256": "sha256:11112222333344445555666677778888999900001111222233334444",
+      "size_bytes": 152144
+    },
+    {
+      "id": "doc-b",
+      "path": "content/doc-b.pdf",
+      "media_type": "application/pdf",
+      "sha256": "sha256:22223333444455556666777788889999000011112222333344445555",
+      "size_bytes": 78400
+    }
+  ],
+  "relationships": [
+    { "subject": "doc-a", "predicate": "cites", "object": "doc-b" }
+  ],
+  "provenance": { "model": "claude-sonnet-4", "retrieval_query": "vendor SOC2" }
+}

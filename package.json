@@ -1,0 +1,46 @@
+{
+  "name": "evidence-bundle-fleet-summary-action",
+  "version": "0.1.0",
+  "description": "GitHub Action that walks a directory of evidence-bundle manifests, counts by purpose, surfaces governance gaps (bundle-expired, unsigned-regulated-bundle, cross-bundle-hash-collision, oversized-bundle, no-provenance), posts a Markdown summary as a PR comment, and fails the build when high-severity findings exist. Fourth in the Action family — completes the per-protocol fleet-summary action quartet across A2A / MCP / prompts / evidence.",
+  "type": "module",
+  "private": true,
+  "license": "AGPL-3.0-or-later",
+  "author": "mizcausevic-dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mizcausevic-dev/evidence-bundle-fleet-summary-action"
+  },
+  "keywords": [
+    "github-action",
+    "actions",
+    "evidence",
+    "provenance",
+    "audit",
+    "compliance",
+    "fleet",
+    "governance",
+    "ai-governance",
+    "kinetic-gain-suite",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.17.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^2.1.8"
+  }
+}

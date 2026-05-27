@@ -1,0 +1,29 @@
+{
+  "evidence_bundle_version": "0.1",
+  "bundle": {
+    "id": "audit-2026q3-vendor-risk",
+    "subject": "Q3 2026 Vendor Risk Audit",
+    "purpose": "audit-evidence",
+    "creator": "compliance@example.com",
+    "labels": { "audit-cycle": "2026-Q3" }
+  },
+  "items": [
+    {
+      "id": "soc2",
+      "path": "content/soc2.pdf",
+      "media_type": "application/pdf",
+      "sha256": "sha256:a1b2c3d4e5f60718293a4b5c6d7e8f9001112233445566778899aabbccddeeff",
+      "size_bytes": 1457820
+    }
+  ],
+  "relationships": [
+    { "subject": "soc2", "predicate": "supersedes", "object": "soc2-q2-2026" }
+  ],
+  "provenance": { "agent_card_uri": "https://example.com/agents/collector.json" },
+  "signature": {
+    "algorithm": "ed25519",
+    "signer": "compliance@example.com",
+    "value": "BBBB2222CCCC3333DDDD4444EEEE5555FFFF666677778888999900001111AAAA",
+    "signed_at": "2026-08-20T00:00:00Z"
+  }
+}

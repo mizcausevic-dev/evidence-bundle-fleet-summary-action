@@ -1,0 +1,40 @@
+name: "Evidence Bundle Fleet Summary"
+description: "Walk a directory of evidence-bundle manifests, count by purpose, surface governance gaps (bundle-expired, unsigned-regulated-bundle, cross-bundle-hash-collision, oversized-bundle, etc.), post a Markdown summary as a PR comment, and fail the build when high-severity findings exist."
+author: "mizcausevic-dev"
+branding:
+  icon: "archive"
+  color: "orange"
+
+inputs:
+  bundles-dir:
+    description: "Directory containing evidence-bundle manifest.json files."
+    required: true
+  comment-on-pr:
+    description: "Post the Markdown summary as a PR comment. 'auto' (default) posts only on pull_request events; 'true' / 'false' force the behavior."
+    required: false
+    default: "auto"
+  fail-on-high:
+    description: "Fail the run when any high-severity finding is present (default 'true')."
+    required: false
+    default: "true"
+  oversized-mb:
+    description: "Bundles larger than this many megabytes trigger the oversized-bundle finding (default 100)."
+    required: false
+  github-token:
+    description: "Token used to post the PR comment (defaults to GITHUB_TOKEN)."
+    required: false
+    default: ${{ github.token }}
+
+outputs:
+  total-bundles:
+    description: "Number of bundles analyzed."
+  high-findings:
+    description: "Count of high-severity findings."
+  signed-bundles:
+    description: "Number of bundles with a signature block."
+  expired-bundles:
+    description: "Number of bundles past their expires_at."
+
+runs:
+  using: "node20"
+  main: "dist/index.js"

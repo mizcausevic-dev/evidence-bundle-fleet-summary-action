@@ -1,0 +1,24 @@
+{
+  "evidence_bundle_version": "0.1",
+  "bundle": {
+    "id": "incident-2026q1-pack",
+    "subject": "Q1 2026 Incident Response Pack",
+    "purpose": "incident-response",
+    "creator": "ops@example.com",
+    "expires_at": "2026-04-01T00:00:00Z",
+    "labels": { "incident": "INC-2026-0117" }
+  },
+  "items": [
+    {
+      "id": "timeline",
+      "path": "content/timeline.md",
+      "media_type": "text/markdown",
+      "sha256": "sha256:c3d4e5f60718293a4b5c6d7e8f900111223344556677889900112233aabbccdd",
+      "size_bytes": 5320
+    }
+  ],
+  "relationships": [
+    { "subject": "timeline", "predicate": "summarizes", "object": "incident-INC-2026-0117" }
+  ],
+  "provenance": { "otel_trace_id": "abc123" }
+}

@@ -1,0 +1,23 @@
+{
+  "evidence_bundle_version": "0.1",
+  "bundle": {
+    "id": "reg-submission-2026",
+    "subject": "Q2 2026 Regulatory Submission",
+    "purpose": "regulatory-submission",
+    "creator": "legal@example.com",
+    "labels": { "regulator": "FDIC", "filing": "Q2-2026" }
+  },
+  "items": [
+    {
+      "id": "form-ffiec",
+      "path": "content/form-ffiec.pdf",
+      "media_type": "application/pdf",
+      "sha256": "sha256:d4e5f60718293a4b5c6d7e8f900111223344556677889900112233aabbccddee",
+      "size_bytes": 92148
+    }
+  ],
+  "relationships": [
+    { "subject": "form-ffiec", "predicate": "supersedes", "object": "form-ffiec-q1-2026" }
+  ],
+  "provenance": { "model": "claude-opus-4" }
+}
