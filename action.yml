@@ -1,5 +1,5 @@
 name: "Evidence Bundle Fleet Summary"
-description: "Walk a directory of evidence-bundle manifests, count by purpose, surface governance gaps (bundle-expired, unsigned-regulated-bundle, cross-bundle-hash-collision, oversized-bundle, etc.), post a Markdown summary as a PR comment, and fail the build when high-severity findings exist."
+description: "Walk evidence-bundle manifests, surface governance gaps, post summary on PR, fail on high-severity findings."
 author: "mizcausevic-dev"
 branding:
   icon: "archive"
